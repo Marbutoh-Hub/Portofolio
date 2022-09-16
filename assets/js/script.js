@@ -31,6 +31,14 @@ const linkedin = document.querySelector(".linkedin");
 const twitter = document.querySelector(".twitter");
 const instagram = document.querySelector(".instagram");
 const nav = document.getElementsByTagName("nav");
+const jumbotron = document.querySelector(".jumbotron");
+const body = document.querySelector("body");
+const menu = document.getElementById("menu");
+const title = document.querySelector(".title");
+const pp = document.querySelector(".pp");
+const content = document.querySelector(".content");
+const aboutH1 = document.querySelector("#about>h1");
+const about = document.querySelector("#about");
 
 var j = 0;
 var speed = 50;
@@ -62,5 +70,24 @@ btnWelcome.addEventListener("click", function () {
   linkedin.style.marginLeft = "10px";
   twitter.style.marginLeft = "10px";
   instagram.style.marginLeft = "10px";
-  // nav.style.position = "relative";
+});
+
+document.addEventListener("scroll", () => {
+  var lastKnownScrollPosition = window.scrollY;
+  title.style.transform = "translate(" + lastKnownScrollPosition / 2 + "%,0px)";
+  pp.style.transform = "translate(0px," + -lastKnownScrollPosition + "%)";
+  console.log(lastKnownScrollPosition);
+  if (lastKnownScrollPosition > 10) {
+    aboutH1.style.marginLeft = "25%";
+    if (lastKnownScrollPosition > 300) {
+      about.style.border = "2px solid rgb(240, 154, 210)";
+      about.style.boxShadow = "0 0 10px rgb(52, 14, 38)";
+    }
+  } else if (lastKnownScrollPosition < 10) {
+    aboutH1.style.marginLeft = "-1000px";
+    if (lastKnownScrollPosition < 10) {
+      about.style.border = "2px solid white";
+      about.style.boxShadow = "0 0 10px white";
+    }
+  }
 });
