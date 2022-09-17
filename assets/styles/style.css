@@ -175,6 +175,7 @@ nav {
   border-radius: 5px;
   box-shadow: 0 0 10px rgb(52, 14, 38);
   top: 0;
+  z-index: 2;
 }
 
 nav li {
@@ -204,7 +205,23 @@ nav a {
 #content {
   background-color: white;
   width: 75%;
-  height: 900px;
+  /* height: 1100px; */
+}
+
+#content > article > h1 {
+  font-family: "Bree Serif", sans-serif;
+  z-index: 0;
+}
+#content > article > h1 > span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#content > article > p {
+  padding: 20px;
+  font-size: 1.3rem;
+  width: 70%;
+  text-align: justify;
 }
 
 #about {
@@ -214,24 +231,87 @@ nav a {
   margin: 10px;
   border-radius: 5px;
   transition: 1s;
-  z-index: 2;
+  z-index: 1;
+  position: relative;
 }
 
 #about > h1 {
   z-index: 0;
-  font-family: "Bree Serif", sans-serif;
   transition: 1s;
   margin-left: -1000px;
 }
-#about > p {
-  padding: 20px;
-  font-size: 1.3rem;
-  width: 70%;
-  text-align: justify;
+
+#about > aside > img {
+  position: absolute;
+  float: right;
+  width: 1px;
+  height: 1px;
+  top: 210px;
+  right: 140px;
+  border-radius: 150px;
+  transition: 1s;
 }
-.span-about {
+
+#skills {
+  padding: 20px;
   font-size: 1.5rem;
-  font-weight: 300;
+  box-sizing: border-box;
+  margin: 10px;
+  border-radius: 5px;
+  transition: 1s;
+  z-index: 1;
+  position: relative;
+}
+
+#skills > h1 {
+  z-index: 0;
+  transition: 1s;
+  margin-left: -1000px;
+}
+
+.list-skill {
+  width: 70%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 2px solid rgb(204, 159, 255);
+  border-radius: 25px;
+  margin-left: -1000px;
+  align-items: center;
+  box-shadow: 0 0 10px rgb(43, 17, 98);
+  transition: 1s;
+}
+.list-skill > img {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgb(204, 159, 255);
+}
+
+.list-skill > img:hover {
+  transform: scale(1.5);
+  background-color: #b6c6f5;
+  box-shadow: 0 0 10px rgb(43, 17, 98);
+}
+
+aside > div {
+  width: 25%;
+  /* height: 265px; */
+  border: 2px solid black;
+  position: absolute;
+  /* top: 70px; */
+  top: 170px;
+  right: 15px;
+  border-radius: 5px;
+  padding: 0%;
+}
+
+aside > div > h6 {
+  text-align: center;
 }
 
 /* CSS CONTENT END */

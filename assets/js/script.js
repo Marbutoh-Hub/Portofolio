@@ -37,8 +37,12 @@ const menu = document.getElementById("menu");
 const title = document.querySelector(".title");
 const pp = document.querySelector(".pp");
 const content = document.querySelector(".content");
-const aboutH1 = document.querySelector("#about>h1");
 const about = document.querySelector("#about");
+const aboutH1 = document.querySelector("#about>h1");
+const imgAbout = document.querySelector("#about > aside > img");
+const skill = document.querySelector("#skills");
+const skillH1 = document.querySelector("#skills>h1");
+const listSkill = document.querySelector(".list-skill");
 
 var j = 0;
 var speed = 50;
@@ -79,15 +83,33 @@ document.addEventListener("scroll", () => {
   console.log(lastKnownScrollPosition);
   if (lastKnownScrollPosition > 10) {
     aboutH1.style.marginLeft = "25%";
-    if (lastKnownScrollPosition > 300) {
+    if (lastKnownScrollPosition > 200) {
       about.style.border = "2px solid rgb(240, 154, 210)";
       about.style.boxShadow = "0 0 10px rgb(52, 14, 38)";
+      imgAbout.style.transform = "scale(200)";
     }
   } else if (lastKnownScrollPosition < 10) {
     aboutH1.style.marginLeft = "-1000px";
     if (lastKnownScrollPosition < 10) {
       about.style.border = "2px solid white";
       about.style.boxShadow = "0 0 10px white";
+      imgAbout.style.transform = "scale(0)";
+    }
+  }
+
+  if (lastKnownScrollPosition > 600) {
+    skillH1.style.marginLeft = "25%";
+    if (lastKnownScrollPosition > 600) {
+      skill.style.border = "2px solid rgb(240, 154, 210)";
+      skill.style.boxShadow = "0 0 10px rgb(52, 14, 38)";
+      listSkill.style.marginLeft = "10px";
+    }
+  } else if (lastKnownScrollPosition < 600) {
+    skillH1.style.marginLeft = "-1000px";
+    if (lastKnownScrollPosition < 500) {
+      skill.style.border = "2px solid white";
+      skill.style.boxShadow = "0 0 10px white";
+      listSkill.style.marginLeft = "-1000px";
     }
   }
 });
