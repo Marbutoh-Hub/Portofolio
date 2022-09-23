@@ -10,7 +10,7 @@
   <body>
     <header>
       <div class="jumbotron">
-        <img src="assets/icon/instagramicon.png" alt="" class="sosmed instagram" />
+        <img src="assets/icon/instagramicon.png" alt="" class="sosmed instagram instagramDevice" />
         <img src="assets/icon/twittericon.png" alt="" class="sosmed twitter" />
         <img src="assets/icon/linkedinicon.png" alt="" class="sosmed linkedin" />
         <img src="assets/icon/githubicon.png" alt="" class="sosmed github" />
@@ -21,7 +21,7 @@
               <p id="inaa"></p>
             </div>
             <h1>I'm , <span class="span-h1">Giri Gimnastiar</span></h1>
-            <p>Introduce I'm A Full Stack Web Developer</p>
+            <p class="afterWelcome after-welcomePDevice">Introduce I'm A Full Stack Web Developer</p>
           </div>
           <div class="before-welcome">
             <h1 id="text-welcome"></h1>
@@ -30,7 +30,7 @@
             <span class="btn-submit">Subbmit</span>
           </div>
         </div>
-        <img src="assets/img/PROFILE.png" alt="" class="pp" />
+        <img src="assets/img/PROFILE.png" alt="" class="pp ppDeviceMode" />
       </div>
       <nav>
         <ul id="menu">
@@ -44,7 +44,7 @@
           </li>
           <li>
             <img src="assets/icon/skillicon.png" alt="" />
-            <a href="#">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
         </ul>
       </nav>
@@ -63,22 +63,69 @@
           </aside>
         </article>
         <article id="skills">
-          <h1>My <span>Skills</span></h1>
-          <div class="list-skill">
-            <img src="assets/img/css3.png" alt="" />
-            <img src="assets/img/html5.png" alt="" />
-            <img src="assets/img/javascript.png" alt="" />
-            <img src="assets/img/php.png" alt="" />
-            <img src="assets/img/MySql.png" alt="" />
+          <h1 class="skill-h1Device">My <span>Skills</span></h1>
+          <div class="list-skill list-skillDevice">
+            <img src="assets/img/css3.png" alt="" class="skillcss" />
+            <img src="assets/img/html5.png" alt="" class="skillhtml" />
+            <img src="assets/img/javascript.png" alt="" class="skilljavascript" />
+            <img src="assets/img/php.png" alt="" class="skillphp" />
+            <img src="assets/img/MySql.png" alt="" class="skillmysql" />
           </div>
           <aside>
             <div>
-              <h6>HTML</h6>
+              <h6 class="inputan"></h6>
+              <p>Progress Bar</p>
+              <div id="field-progress-bar"></div>
+              <p id="persentase"></p>
             </div>
           </aside>
         </article>
       </div>
+      <aside id="aside-end">
+        <header class="profile-card">
+          <figure>
+            <div class="class-figure">
+              <img src="assets/icon/dropdownicon.png" alt="" />
+            </div>
+            <img src="assets/img/PP2.png" alt="" class="pp2" />
+          </figure>
+          <section id="section-aside">
+            <h3>Profile</h3>
+            <table>
+              <tr>
+                <th>Nama</th>
+                <td>:</td>
+                <td>Giri Gimnastiar</td>
+              </tr>
+              <tr>
+                <th>Umur</th>
+                <td>:</td>
+                <td>29 Tahun</td>
+              </tr>
+              <tr>
+                <th>Pekerjaan</th>
+                <td>:</td>
+                <td>Programmer</td>
+              </tr>
+              <tr>
+                <th>Hobby</th>
+                <td>:</td>
+                <td>Mancing</td>
+              </tr>
+              <tr>
+                <th>E-mail</th>
+                <td>:</td>
+                <td><span>girigimnastiar2@gmail.com</span></td>
+              </tr>
+              </tr>
+            </table>
+          </section>
+        </header>
+      </aside>
     </main>
+    <footer>
+      <p>Submission Web &#169; 2020, Giri Gimnastiar</p>
+    </footer>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
